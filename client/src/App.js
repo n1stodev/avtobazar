@@ -1,4 +1,5 @@
 import './App.css';
+import Main from './components/main/Main';
 import Navbar from './components/navbar/Navbar';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
       <h1>Hello world</h1>
       <Navbar />
       <Slider />
+      <Main />
       <Footer />
     </div>
   );
