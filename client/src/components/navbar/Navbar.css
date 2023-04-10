@@ -5,6 +5,7 @@
     top: 0;
     left: 0;
     z-index: 25;
+    background: #fff;
 }
 
 .navbar .container {
@@ -18,8 +19,12 @@
 
 .nav__logo {
     font-weight: 500;
-    color: #0080ff;
-    font-size: 32px;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    background: #0080ff;
+    padding: 6px 11px;
+    border-radius: 0 15px 0 15px;
 }
 
 .nav__logo span {

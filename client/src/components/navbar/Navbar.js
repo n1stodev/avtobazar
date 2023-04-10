@@ -28,7 +28,7 @@ function Navbar() {
     return (
         <div className='navbar'>
             <div className="container">
-                <h2 className="nav__logo">Auto<span>Bazar</span> </h2>
+                <Link to='/'><h2 className="nav__logo">Auto<span>Bazar</span> </h2></Link>
                 <div className={`nav__collection ${nav ? 'active' : 'unactive'}`}>
                     <button className="nav__btn" onClick={() => setOpen(!open)}>Katalog</button>
                     <ul className="nav__col">

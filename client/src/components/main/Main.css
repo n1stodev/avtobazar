@@ -1,0 +1,134 @@
+.main {
+    width: 100%;
+    padding: 50px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main__pageLinks {
+    display: flex;
+    gap: 25px;
+}
+
+.main__pLItem {
+    width: 420px;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.main__pLItem:nth-child(1) {
+    background: url(../../assets/images/page__link3.jpg) no-repeat center/cover;
+}
+
+.main__pLItem:nth-child(2) {
+    background: url(../../assets/images/page__link2.jpg) no-repeat center/cover;
+}
+
+.main__pLItem:nth-child(3) {
+    background: url(../../assets/images/page__link1.jpg) no-repeat center/cover;
+}
+
+.main__products {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.main__productsCard {
+    width: 350px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 34, 0.07);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 34, 0.07);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 34, 0.07);
+    border-radius: 15px;
+    gap: 10px;
+    color: #222;
+    flex-wrap: wrap;
+    border: 1px solid #ddd5;
+}
+
+.main__pCImg {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+}
+
+.main__pCTitle {
+    width: 100%;
+    font-size: 28px;
+}
+
+
+.caca {
+    display: flex;
+    width: 100%;
+    height: 45px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main__pCPrice {
+    width: calc(40% - 5px);
+    text-align: left;
+    height: 35px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.main__pCCategory {
+    width: calc(50% - 5px);
+    height: 35px;
+    border: 2px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.main__pCBtns {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    gap: 20px;
+}
+
+.main__pCLiked {
+    width: 50px;
+    height: 100%;
+    border: 2px solid #0080ff;
+    outline: none;
+    background: none;
+    border-radius: 5px;
+    font-size: 28px;
+    color: #0080ff;
+    display: grid;
+    place-items: center;
+}
+
+.main__pCBtn {
+    width: calc(100% - 70px);
+    height: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #0080ff;
+    font-size: 28px;
+}
+
+.main__productsTitle {
+    width: 100%;
+    font-size: 32px;
+    color: #222;
+    padding: 10px 0;
+    border-bottom: 1px solid #222;
+}
