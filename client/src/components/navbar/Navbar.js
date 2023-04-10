@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import './Navbar.css'
 import { NavLink, Link } from 'react-router-dom'
 import { FiMessageCircle, FiHeart, FiUser } from 'react-icons/fi'
@@ -8,6 +8,23 @@ import { BsXLg } from 'react-icons/bs'
 function Navbar() {
     const [open, setOpen] = useState(false)
     const [nav, setNav] = useState(false)
+
+    let navRef = useRef()
+
+    useEffect(() => {
+        let handler = e => {
+            if (!navRef.current.contains(e.target)) {
+                setOpen(false)
+            }
+        }
+
+        document.addEventListener('mousedown', handler);
+        return () => {
+            document.removeEventListener('mousedown', handler)
+        }
+    }, [])
+
+
     return (
         <div className='navbar'>
             <div className="container">
@@ -29,7 +46,7 @@ function Navbar() {
                         </NavLink>
                     </ul>
                 </div>
-                <div className={`nav__dropdown ${open ? 'active' : 'unactive'}`}>
+                <div className={`nav__dropdown ${open ? 'active' : 'unactive'}`} ref={navRef}>
                     <h2>Katalog</h2>
                     <Link to='/' classsName='nav__dropdownItem'>
                         <FaCarSide />

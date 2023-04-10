@@ -3,8 +3,6 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
 import { CAROUSEL } from '../../static'
 import './Slider.css'
 
-console.log(CAROUSEL)
-
 function Slider() {
     const [curInx, setCurInx] = useState(0)
     const prevSlide = () => {
