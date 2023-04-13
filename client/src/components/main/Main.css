@@ -110,9 +110,10 @@ a {
     background: none;
     border-radius: 5px;
     font-size: 28px;
-    color: #0080ff;
+    color: #559fe086;
     display: grid;
     place-items: center;
+    cursor: pointer;
 }
 
 .main__pCBtn {
@@ -131,4 +132,18 @@ a {
     color: #222;
     padding: 10px 0;
     border-bottom: 1px solid #222;
+}
+
+.main__pCLikedTrue{
+    width: 50px;
+    height: 100%;
+    border: 2px solid #0080ff;
+    outline: none;
+    background: none;
+    border-radius: 5px;
+    font-size: 28px;
+    color: #0080ff;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
 }

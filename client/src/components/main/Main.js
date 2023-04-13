@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Main.css'
 import { Link } from 'react-router-dom'
 import { PRODUCTS } from '../../static'
@@ -8,6 +8,30 @@ import { BsHeart } from 'react-icons/bs'
 // import img3 from '../../assets/images/page__link3.jpg'
 
 function Main() {
+ const [yuk, setYuk] = useState(PRODUCTS[0]);
+ const [mashina, setMashina] = useState(PRODUCTS[1]);
+ const [motot, setMotot] = useState(PRODUCTS[2]);
+
+  const handleYuk = (postId) => {
+    const postIndex = yuk.findIndex(post => post.id === postId);
+    const updatedPosts = [...yuk];
+    updatedPosts[postIndex].liked = true;
+    setYuk(updatedPosts);
+  };
+
+  const handleMashina = (postId) => {
+    const postIndex = mashina.findIndex(post => post.id === postId);
+    const updatedPosts = [...mashina];
+    updatedPosts[postIndex].liked = true;
+    setMashina(updatedPosts);
+  };
+
+  const handleMotot = (postId) => {
+    const postIndex = motot.findIndex(post => post.id === postId);
+    const updatedPosts = [...motot];
+    updatedPosts[postIndex].liked = true;
+    setMotot(updatedPosts);
+  };
   return (
     <div className='main'>
       <div className="container">
@@ -31,7 +55,7 @@ function Main() {
                   <p className='main__pCCategory'>{e.category}</p>
                 </div>
                 <div className="main__pCBtns">
-                  <button className="main__pCLiked"><BsHeart /></button>
+                  <button className={e.liked ? 'main__pCLikedTrue' : 'main__pCLiked'} onClick={() => handleYuk(e.id)}><BsHeart /></button>
                   <button className="main__pCBtn">Batafsil</button>
                 </div>
               </div>
@@ -48,7 +72,7 @@ function Main() {
                   <p className='main__pCCategory'>{e.category}</p>
                 </div>
                 <div className="main__pCBtns">
-                  <button className="main__pCLiked"><BsHeart /></button>
+                  <button className={e.liked ? 'main__pCLikedTrue' : 'main__pCLiked'} onClick={() => handleMashina(e.id)}><BsHeart /></button>
                   <button className="main__pCBtn">Batafsil</button>
                 </div>
               </div>
@@ -65,7 +89,7 @@ function Main() {
                   <p className='main__pCCategory'>{e.category}</p>
                 </div>
                 <div className="main__pCBtns">
-                  <button className="main__pCLiked"><BsHeart /></button>
+                  <button className={e.liked ? 'main__pCLikedTrue' : 'main__pCLiked'} onClick={() => handleMotot(e.id)} ><BsHeart /></button>
                   <button className="main__pCBtn">Batafsil</button>
                 </div>
               </div>
