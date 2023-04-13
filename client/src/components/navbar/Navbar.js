@@ -36,11 +36,11 @@ function Navbar() {
                             <FiMessageCircle />
                             <span>Xabarlar</span>
                         </NavLink>
-                        <NavLink to='/'>
+                        <NavLink to='/liked'>
                             <FiHeart />
                             <span>Yoqtirilganlar</span>
                         </NavLink>
-                        <NavLink to='/'>
+                        <NavLink to='/login'>
                             <FiUser />
                             <span>Kirish</span>
                         </NavLink>

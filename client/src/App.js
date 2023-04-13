@@ -5,6 +5,7 @@ import Home from './router/home/Home';
 import SignIn from './router/signin/SignIn';
 import SignUp from './router/signup/SignUp';
 import { Routes, Route } from 'react-router-dom'
+import Liked from './router/liked/Liked';
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='login' element={<SignIn />} />
-        <Route path='signup' element={<SignUp />} />
+        <Route path='/login' element={<SignIn />} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path='/liked' element={<Liked />} />
       </Routes>
       <Footer />
     </div>

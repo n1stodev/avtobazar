@@ -1,5 +1,6 @@
 import React from 'react'
 import './SignUp.css'
+import { Link } from 'react-router-dom'
 
 function SignUp() {
     return (
@@ -10,6 +11,7 @@ function SignUp() {
                     <input type="text" placeholder='Ismingiz...' required />
                     <input type="tel" placeholder='Telefon raqamingiz' required />
                     <button type='submit' className="sign__btn">RO'YHATDAN O'TISH</button>
+                    <button type='submit' className="sign__btn"><Link to='/login' className='link'>Akkountingiz bormi</Link></button>
                 </form>
             </div>
         </div>
