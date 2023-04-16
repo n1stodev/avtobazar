@@ -10,12 +10,19 @@ export const CAROUSEL = [
 
 export const PRODUCTS = [
     {
-        id: 1,
+        id: 0,
         img: img1,
         name: 'Howo',
         price: 20_000,
         category: 'Yuk Mashinalar',
         liked: false,
+    },
+    {
+        id: 1,
+        img: img1,
+        name: 'Howo',
+        price: 20_000,
+        category: 'Yuk Mashinalar', liked: false,
     },
     {
         id: 2,
@@ -76,9 +83,9 @@ export const PRODUCTS = [
     {
         id: 10,
         img: img1,
-        name: 'Howo',
-        price: 20_000,
-        category: 'Yuk Mashinalar', liked: false,
+        name: 'Tico',
+        price: 10_000,
+        category: 'Yengil Mashinalar', liked: false,
     },
     {
         id: 11,
@@ -146,9 +153,9 @@ export const PRODUCTS = [
     {
         id: 20,
         img: img2,
-        name: 'Tico',
-        price: 10_000,
-        category: 'Yengil Mashinalar', liked: false,
+        name: 'Mototsikl',
+        price: 1_000,
+        category: 'Mototsikllar', liked: false,
     },
     {
         id: 21,
@@ -208,13 +215,6 @@ export const PRODUCTS = [
     },
     {
         id: 29,
-        img: img3,
-        name: 'Mototsikl',
-        price: 1_000,
-        category: 'Mototsikllar', liked: false,
-    },
-    {
-        id: 30,
         img: img3,
         name: 'Mototsikl',
         price: 1_000,

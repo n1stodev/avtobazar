@@ -2,11 +2,10 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { PRODUCTS } from '../../static'
 import './SinglePage.css'
-import img1 from '../../assets/images/page__link1.jpg'
 
 function SinglePage() {
-    const { id } = useParams()
-    const car = PRODUCTS.find(item => item.id === id)
+    const { id } = useParams();
+    const car = PRODUCTS[id];
     console.log(car)
     return (
         <div className='single-page container'>
