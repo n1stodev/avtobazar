@@ -15,7 +15,7 @@ function SinglePage() {
             <div className="single-page__contents">
                 <h1 className="single-page__content-title">Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
                 <p className="single-page__content-sha">Sotuvchi: <span>{'Tojiakhmedov Nurillo'}</span></p>
-                <p className="single-page__content-sha">Mashina: <span>{'Jentra'}</span></p>
+                <p className="single-page__content-sha">Mashina: <span>{'Spark'}</span></p>
                 <hr />
                 <div className="single-page__content-details">
                     <h4 className="single-page__content-detailsTitle">Mashina ma'lumotlari</h4>
