@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import { Navigation, Autoplay, Pagination } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 
 function Slider() {
     return (
@@ -15,7 +15,7 @@ function Slider() {
                     delay: 2500,
                     disableOnInteraction: false,
                 }}
-                modules={[Navigation, Autoplay, Pagination]}
+                modules={[Navigation, Autoplay]}
                 className="mySwiper">
                 <SwiperSlide><img src="https://images.uzum.uz/cghe007g49devoabuk4g/main_page_banner.jpg" alt="" /></SwiperSlide>
                 <SwiperSlide><img src="https://images.uzum.uz/cgqfulfg49devoadeui0/main_page_banner.jpg" alt="" /></SwiperSlide>

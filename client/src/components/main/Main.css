@@ -150,3 +150,10 @@ a {
     border-top: 1px solid #0080ff;
     padding: 0 2px;
 }
+
+@media screen and (max-width: 990px) {
+    .main__pageLinks {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
