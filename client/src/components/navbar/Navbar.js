@@ -17,7 +17,6 @@ function Navbar() {
                 setOpen(false)
             }
         }
-
         document.addEventListener('mousedown', handler);
         return () => {
             document.removeEventListener('mousedown', handler)
@@ -29,7 +28,7 @@ function Navbar() {
         <div className='navbar'>
             <div className="container">
                 <Link to='/'><h2 className="nav__logo">Auto<span>Bazar</span> </h2></Link>
-                <div className={`nav__collection ${nav ? 'active' : 'unactive'}`}>
+                <div className={`nav__collection ${nav ? 'active' : <></>}`}>
                     <button className="nav__btn" onClick={() => setOpen(!open)}>Katalog</button>
                     <ul className="nav__col">
                         <NavLink to='/'>

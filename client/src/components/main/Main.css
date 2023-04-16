@@ -13,7 +13,7 @@ a {
 }
 
 .main__pLItem {
-    min-width: 420px;
+    width: 400px;
     height: 180px;
     border-radius: 10px;
 }
@@ -156,4 +156,14 @@ a {
         flex-wrap: wrap;
         justify-content: center;
     }
+    .main__pLItem {
+        height: 180px;
+        width: 380px;
+    }
 }
+
+@media screen and (max-width: 660px) {
+    .main__pLItem {
+    }
+}
+
