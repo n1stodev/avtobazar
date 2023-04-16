@@ -1,3 +1,8 @@
+.banner {
+    border-radius: 25px;
+    overflow: hidden;
+}
+
 .banner img {
     width: 98%;
     height: 500px;
