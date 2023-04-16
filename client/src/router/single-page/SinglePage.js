@@ -11,7 +11,7 @@ function SinglePage() {
     return (
         <div className='single-page container'>
             <div className="single-page__images">
-                <img src={car.img} alt="" />
+                <img src={img1} alt="" />
             </div>
             <div className="single-page__contents">
                 <h1 className="single-page__content-title">Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
@@ -31,8 +31,8 @@ function SinglePage() {
                 </div>
                 <p className="single-page__content-price">Narx: <span>{3000}$</span></p>
                 <div className="single-page__content-btns">
-                    <button className="single-page__content-btn">Telefon qilish</button>
-                    <button className="single-page__content-btn">SMS yozish</button>
+                    <button className="single-page__content-btn green">Telefon qilish</button>
+                    <button className="single-page__content-btn yellow">SMS yozish</button>
                     <button className="single-page__content-btn">Fikr bildirish</button>
                 </div>
                 <p className="single-page__content-desc">

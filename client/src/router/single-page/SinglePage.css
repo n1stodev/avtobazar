@@ -97,6 +97,7 @@
     font-weight: 500;
     border-radius: 3px;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .single-page__content-desc {
@@ -108,4 +109,12 @@
     margin-bottom: 5px;
     font-size: 18px;
     font-weight: 500;
+}
+
+.yellow {
+    background: rgb(255, 217, 0);
+}
+
+.green {
+    background: rgb(4, 226, 0);
 }

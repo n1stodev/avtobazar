@@ -1,28 +1,26 @@
-import React, { useState } from 'react'
-import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
-import { CAROUSEL } from '../../static'
+import React from 'react'
 import './Slider.css'
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import { Navigation, Autoplay, Pagination } from "swiper";
 
 function Slider() {
-    const [curInx, setCurInx] = useState(0)
-    const prevSlide = () => {
-        const isFirstSlide = curInx === 0
-        const newInx = isFirstSlide ? CAROUSEL.length - 1 : curInx - 1
-        setCurInx(newInx)
-    }
-
-    const nextSlide = () => {
-        const isLastSlide = curInx === CAROUSEL.length - 1
-        const newInx = isLastSlide ? 0 : curInx + 1
-        setCurInx(newInx)
-    }
     return (
-        <div className='carousel'>
-            <div className="container">
-                <div className="carousel__item" style={{ background: `url(${CAROUSEL[curInx]}) no-repeat center/cover` }}></div>
-                <button className="carousel__btn carousel__btn1" onClick={() => prevSlide()}><BsChevronCompactLeft /></button>
-                <button className="carousel__btn carousel__btn2" onClick={() => nextSlide()}><BsChevronCompactRight /></button>
-            </div>
+        <div className='banner container'>
+            <Swiper
+                loop={true} navigation={true}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                modules={[Navigation, Autoplay, Pagination]}
+                className="mySwiper">
+                <SwiperSlide><img src="https://images.uzum.uz/cghe007g49devoabuk4g/main_page_banner.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img src="https://images.uzum.uz/cgqfulfg49devoadeui0/main_page_banner.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img src="https://images.uzum.uz/cgqmsq7g49devoadh81g/main_page_banner.jpg" alt="" /></SwiperSlide>
+            </Swiper>
         </div>
     )
 }
