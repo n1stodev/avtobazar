@@ -6,6 +6,7 @@ import SignIn from './router/signin/SignIn';
 import SignUp from './router/signup/SignUp';
 import { Routes, Route } from 'react-router-dom'
 import Liked from './router/liked/Liked';
+import SinglePage from './router/single-page/SinglePage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/products/:id' element={<SinglePage />} />
         <Route path='/login' element={<SignIn />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/liked' element={<Liked />} />
