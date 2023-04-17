@@ -191,6 +191,7 @@ a {
     }
     .main__pCCategory {
         font-size: 12px;
+        padding: 2px 4px;
     }
     .main__pCPrice {
         font-size: 14px;
