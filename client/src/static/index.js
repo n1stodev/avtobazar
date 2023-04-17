@@ -8,7 +8,7 @@ export const CAROUSEL = [
     `https://uzautomotors.com/images/uploads/2735d8cc39989fcdac2197e908485732.png`,
 ]
 
-export const PRODUCTS = [
+const Cars = [
     {
         id: 1,
         img: img1,
@@ -221,3 +221,5 @@ export const PRODUCTS = [
         category: 'Mototsikllar', liked: false,
     },
 ]
+
+export default Cars

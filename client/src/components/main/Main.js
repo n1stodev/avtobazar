@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import './Main.css'
 import { Link } from 'react-router-dom'
-import { PRODUCTS } from '../../static'
+import Cars from '../../static'
 import { BsHeart, BsHeartFill, BsChevronRight } from 'react-icons/bs'
 
 function Main() {
-  const [car, setCar] = useState(PRODUCTS);
+  const [car, setCar] = useState(Cars);
 
   const handleCar = (postId) => {
     const postIndex = car.findIndex(post => post.id === postId);
@@ -26,7 +26,7 @@ function Main() {
         </div>
         <div className="main__products">
           {
-            PRODUCTS?.map((e) => (
+            Cars?.map((e) => (
               <div className="main__productsCard" key={e.id}>
                 <Link to={`/products/${e.id}`}>
                   <img src={e.img} alt="" className='main__pCImg' />

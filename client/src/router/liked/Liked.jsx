@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { PRODUCTS } from "../../static";
+import Cars from "../../static";
 import "./Liked.css";
 import { Link } from 'react-router-dom'
 import { BsHeartFill, BsChevronRight } from "react-icons/bs";
 
 function Liked() {
-  const [car, setCar] = useState(PRODUCTS);
+  const [car, setCar] = useState(Cars);
 
   const handleCar = function (postId) {
     const postIndex = car.findIndex(post => post.id === postId);
@@ -17,7 +17,7 @@ function Liked() {
     <div className="liked container">
       <h2 className="main__productsTitle">Tanlanganlar</h2>
       <div className="liked__posts">
-        {PRODUCTS
+        {Cars
           .filter((product) => (product.liked === true))
           .map(liked =>
             <div className="main__productsCard" key={liked.id}>
@@ -37,7 +37,7 @@ function Liked() {
               </div>
             </div>
           )}
-        {PRODUCTS.every((post) => !post.liked) && (
+        {Cars.every((post) => !post.liked) && (
           <h3>Tanlanganlar yo'q</h3>
         )}
       </div>

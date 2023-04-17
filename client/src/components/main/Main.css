@@ -163,7 +163,30 @@ a {
 }
 
 @media screen and (max-width: 660px) {
-    .main__pLItem {
+    .main__products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        padding: 0 40px;
+    }
+    .main__productsCard {
+        width: auto;
+        gap: 10px;
+    }
+    .main__pCImg {
+        height: 140px;
     }
 }
 
+@media screen and (max-width: 530px) {
+    .main__products {
+        padding: 0 10px;
+    }
+    .main__productsCard {
+        gap: 5px;
+        padding: 5px;
+    }
+    .main__pCImg {
+        height: 120px;
+    }
+}

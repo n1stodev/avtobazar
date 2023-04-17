@@ -7,6 +7,7 @@ import SignUp from './router/signup/SignUp';
 import { Routes, Route } from 'react-router-dom'
 import Liked from './router/liked/Liked';
 import SinglePage from './router/single-page/SinglePage';
+import Comments from './components/comments/Comments';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/login' element={<SignIn />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/liked' element={<Liked />} />
+        <Route path='product-comments/:id' element={<Comments />} />
       </Routes>
       <Footer />
     </div>

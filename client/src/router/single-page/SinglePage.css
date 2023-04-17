@@ -7,7 +7,7 @@
 
 .single-page__images {
     width: 50%;
-    height: 80vh;
+    height: 40vw;
 }
 
 .single-page__images img {
@@ -17,7 +17,7 @@
 }
 
 .single-page__contents {
-    height: 80vh;
+    height: 40vw;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -57,14 +57,17 @@
     height: auto;
     width: auto;
     padding: 5px;
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 3px;
     margin-bottom: 10px;
+    list-style: none;
 }
 
 .single-page__content-detailsItem {
     font-size: 15px;
+    list-style: circle;
 }
 
 .single-page__content-detailsItem span {
@@ -117,4 +120,19 @@
 
 .green {
     background: rgb(4, 226, 0);
+}
+
+@media screen and (max-width: 990px) {
+    .single-page {
+        flex-direction: column;
+    }
+    .single-page__images {
+        height: 100vw;
+        width: 98%;
+    }
+    .single-page__contents {
+        width: 98%;
+        height: auto;
+        overflow: auto;
+    }
 }
