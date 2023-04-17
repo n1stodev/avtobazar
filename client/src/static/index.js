@@ -223,3 +223,9 @@ const Cars = [
 ]
 
 export default Cars
+
+export const arr = [
+    { name: 'apple', price: '2000sum', id: 1 },
+    { name: 'orange', price: '2500sum', id: 2 },
+    { name: 'peach', price: '2700sum', id: 3 }
+]

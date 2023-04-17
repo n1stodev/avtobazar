@@ -1,22 +1,22 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
-import Cars from '../../static'
+import Cars, { arr } from '../../static'
 import './SinglePage.css'
 import img1 from '../../assets/images/page__link1.jpg'
 
 const SinglePage = () => {
-    const { id } = useParams()
-    const car = Cars.find((car) => car.id === id)
-    // console.log(car);
+    const params = useParams()
+
+    const car = Cars.find(car => car.id === Number(params.id))
     return (
         <div className='single-page container'>
             <div className="single-page__images">
-                <img src={img1} alt={`car`} />
+                <img src={car.img} alt={`car`} />
             </div>
             <div className="single-page__contents">
-                <h1 className="single-page__content-title">{'Lorem ipsum dolor'}</h1>
+                <h1 className="single-page__content-title">{'Lorem ipsum dolor Lorem ipsum dolor'}</h1>
                 <p className="single-page__content-sha">Sotuvchi: <span>{'Tojiakhmedov Nurillo'}</span></p>
-                <p className="single-page__content-sha">Mashina: <span>{'Jentra'}</span></p>
+                <p className="single-page__content-sha">Mashina: <span>{car.name}</span></p>
                 <hr />
                 <div className="single-page__content-details">
                     <h4 className="single-page__content-detailsTitle">Mashina ma'lumotlari</h4>
@@ -29,11 +29,11 @@ const SinglePage = () => {
                         <li className="single-page__content-detailsItem"> Positsiya: <span>{4}-positsiya</span></li>
                     </ul>
                 </div>
-                <p className="single-page__content-price">Narx: <span>{20000}$</span></p>
+                <p className="single-page__content-price">Narx: <span>{car.price}$</span></p>
                 <div className="single-page__content-btns">
                     <button className="single-page__content-btn green">Telefon qilish</button>
                     <button className="single-page__content-btn yellow">SMS yozish</button>
-                    <Link to={`product-comments/${id}`}><button className="single-page__content-btn">Fikr bildirish</button></Link>
+                    {/* <Link to={`product-comments/${id}`}><button className="single-page__content-btn">Fikr bildirish</button></Link> */}
                 </div>
                 <p className="single-page__content-desc">
                     <span>Tavsif:</span> <br />
