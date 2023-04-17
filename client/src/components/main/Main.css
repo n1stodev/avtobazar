@@ -186,7 +186,38 @@ a {
         gap: 5px;
         padding: 5px;
     }
+    .container {
+        margin: auto;
+    }
+    .main__pCCategory {
+        font-size: 12px;
+    }
+    .main__pCPrice {
+        font-size: 14px;
+    }
+    .main__pCBtns {
+        margin-top: 5px;
+        height: 35px;
+    }
+    .main__pCBtn button {
+        font-size: 14px;
+    }
+    .main__pCBtn {
+        width: 55%;
+    }
+    .main__pCLiked {
+        width: 35px;
+        font-size: 16px;
+    }
     .main__pCImg {
         height: 120px;
+    }
+    .main__pc-comment {
+        margin-top: 6px;
+        height: 32px;
+        font-size: 14px;
+    }
+    .main__products {
+        padding: 20px 0;
     }
 }
