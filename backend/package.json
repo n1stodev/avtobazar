@@ -1,11 +1,18 @@
 {
+<<<<<<< HEAD
   "name": "avtabazar2",
+=======
+  "name": "lesson-...-8-9-10",
+>>>>>>> 3af16b75607c56bc3a952f70471f19f488d582ff
   "version": "1.0.0",
   "description": "",
   "type": "module",
   "main": "server/server.js",
   "scripts": {
+<<<<<<< HEAD
     "start": "node server/server.js",
+=======
+>>>>>>> 3af16b75607c56bc3a952f70471f19f488d582ff
     "dev": "nodemon server/server.js"
   },
   "keywords": [],
@@ -16,9 +23,14 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
+<<<<<<< HEAD
     "mongodb": "^5.1.0",
     "mongoose": "^7.0.3",
     "nodemailer": "^6.9.1",
     "sha256": "^0.2.0"
+=======
+    "mongodb": "^5.2.0",
+    "mongoose": "^7.0.3"
+>>>>>>> 3af16b75607c56bc3a952f70471f19f488d582ff
   }
 }

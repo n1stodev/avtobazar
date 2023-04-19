@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import mongoose from "mongoose";
 mongoose.connect("mongodb+srv://abduhamidbotirovweb:abduhamidjon707@cluster0.ab9kvno.mongodb.net/avtabazar?retryWrites=true&w=majority").then(() => {
   console.log("connection");
@@ -50,3 +51,16 @@ mongoose.connect("mongodb+srv://abduhamidbotirovweb:abduhamidjon707@cluster0.ab9
 //     createAt:'create_at'
 //   }
 // }
+=======
+import mongoose from 'mongoose';
+mongoose.connect('mongodb://localhost/dars', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
+const connection = mongoose.connection;
+connection.on('error', console.error.bind(console, 'MongoDBga ulanishda xato yuz berdi:'));
+connection.once('open', function () {
+    console.log("MongoDBga muvaffaqiyatli ulanildi");
+});
+>>>>>>> 3af16b75607c56bc3a952f70471f19f488d582ff

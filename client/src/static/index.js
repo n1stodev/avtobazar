@@ -2,198 +2,230 @@ import img1 from '../assets/images/page__link1.jpg'
 import img2 from '../assets/images/page__link2.jpg'
 import img3 from '../assets/images/page__link3.jpg'
 
-
 export const CAROUSEL = [
     `https://hips.hearstapps.com/hmg-prod/images/2021-kia-k5-gt-line-108-1594832111.jpg?crop=0.616xw:0.462xh;0.0578xw,0.513xh&resize=1200:*`,
     `https://lionmotors.uz/wp-content/uploads/2020/11/malibumin2.jpg`,
     `https://uzautomotors.com/images/uploads/2735d8cc39989fcdac2197e908485732.png`,
 ]
 
-export const PRODUCTS = [
-    [
-        {
-            url: img1,
-            name: 'Howo',
-            price: 20_000,
-            category: 'Yuk Mashinalar'
-        },
-        {
-            url: img1,
-            name: 'Howo',
-            price: 20_000,
-            category: 'Yuk Mashinalar'
-        },
-        {
-            url: img1,
-            name: 'Howo',
-            price: 20_000,
-            category: 'Yuk Mashinalar'
-        },
-        {
-            url: img1,
-            name: 'Howo',
-            price: 20_000,
-            category: 'Yuk Mashinalar'
-        },
-        {
-            url: img1,
-            name: 'Howo',
-            price: 20_000,
-            category: 'Yuk Mashinalar'
-        },
-        {
-            url: img1,
-            name: 'Howo',
-            price: 20_000,
-            category: 'Yuk Mashinalar'
-        },
-        {
-            url: img1,
-            name: 'Howo',
-            price: 20_000,
-            category: 'Yuk Mashinalar'
-        },
-        {
-            url: img1,
-            name: 'Howo',
-            price: 20_000,
-            category: 'Yuk Mashinalar'
-        },
-        {
-            url: img1,
-            name: 'Howo',
-            price: 20_000,
-            category: 'Yuk Mashinalar'
-        },
-        {
-            url: img1,
-            name: 'Howo',
-            price: 20_000,
-            category: 'Yuk Mashinalar'
-        },
-    ],
-    [
-        {
-            url: img2,
-            name: 'Tico',
-            price: 10_000,
-            category: 'Yengil Mashinalar'
-        },
-        {
-            url: img2,
-            name: 'Tico',
-            price: 10_000,
-            category: 'Yengil Mashinalar'
-        },
-        {
-            url: img2,
-            name: 'Tico',
-            price: 10_000,
-            category: 'Yengil Mashinalar'
-        },
-        {
-            url: img2,
-            name: 'Tico',
-            price: 10_000,
-            category: 'Yengil Mashinalar'
-        },
-        {
-            url: img2,
-            name: 'Tico',
-            price: 10_000,
-            category: 'Yengil Mashinalar'
-        },
-        {
-            url: img2,
-            name: 'Tico',
-            price: 10_000,
-            category: 'Yengil Mashinalar'
-        },
-        {
-            url: img2,
-            name: 'Tico',
-            price: 10_000,
-            category: 'Yengil Mashinalar'
-        },
-        {
-            url: img2,
-            name: 'Tico',
-            price: 10_000,
-            category: 'Yengil Mashinalar'
-        },
-        {
-            url: img2,
-            name: 'Tico',
-            price: 10_000,
-            category: 'Yengil Mashinalar'
-        },
-        {
-            url: img2,
-            name: 'Tico',
-            price: 10_000,
-            category: 'Yengil Mashinalar'
-        },
-    ],
-    [
-        {
-            url: img3,
-            name: 'Mototsikl',
-            price: 1_000,
-            category: 'Mototsikllar'
-        },
-        {
-            url: img3,
-            name: 'Mototsikl',
-            price: 1_000,
-            category: 'Mototsikllar'
-        },
-        {
-            url: img3,
-            name: 'Mototsikl',
-            price: 1_000,
-            category: 'Mototsikllar'
-        },
-        {
-            url: img3,
-            name: 'Mototsikl',
-            price: 1_000,
-            category: 'Mototsikllar'
-        },
-        {
-            url: img3,
-            name: 'Mototsikl',
-            price: 1_000,
-            category: 'Mototsikllar'
-        },
-        {
-            url: img3,
-            name: 'Mototsikl',
-            price: 1_000,
-            category: 'Mototsikllar'
-        },
-        {
-            url: img3,
-            name: 'Mototsikl',
-            price: 1_000,
-            category: 'Mototsikllar'
-        },
-        {
-            url: img3,
-            name: 'Mototsikl',
-            price: 1_000,
-            category: 'Mototsikllar'
-        },
-        {
-            url: img3,
-            name: 'Mototsikl',
-            price: 1_000,
-            category: 'Mototsikllar'
-        },
-        {
-            url: img3,
-            name: 'Mototsikl',
-            price: 1_000,
-            category: 'Mototsikllar'
-        },
-    ],
+const Cars = [
+    {
+        id: 1,
+        img: img1,
+        name: 'Howo',
+        price: 20_000,
+        category: 'Yuk Mashinalar',
+        liked: false,
+    },
+    {
+        id: 2,
+        img: img1,
+        name: 'Howo',
+        price: 20_000,
+        category: 'Yuk Mashinalar', liked: false,
+    },
+    {
+        id: 3,
+        img: img1,
+        name: 'Howo',
+        price: 20_000,
+        category: 'Yuk Mashinalar', liked: false,
+    },
+    {
+        id: 4,
+        img: img1,
+        name: 'Howo',
+        price: 20_000,
+        category: 'Yuk Mashinalar', liked: false,
+    },
+    {
+        id: 5,
+        img: img1,
+        name: 'Howo',
+        price: 20_000,
+        category: 'Yuk Mashinalar', liked: false,
+    },
+    {
+        id: 6,
+        img: img1,
+        name: 'Howo',
+        price: 20_000,
+        category: 'Yuk Mashinalar', liked: false,
+    },
+    {
+        id: 7,
+        img: img1,
+        name: 'Howo',
+        price: 20_000,
+        category: 'Yuk Mashinalar', liked: false,
+    },
+    {
+        id: 8,
+        img: img1,
+        name: 'Howo',
+        price: 20_000,
+        category: 'Yuk Mashinalar', liked: false,
+    },
+    {
+        id: 9,
+        img: img1,
+        name: 'Howo',
+        price: 20_000,
+        category: 'Yuk Mashinalar', liked: false,
+    },
+    {
+        id: 10,
+        img: img1,
+        name: 'Howo',
+        price: 20_000,
+        category: 'Yuk Mashinalar', liked: false,
+    },
+    {
+        id: 11,
+        img: img2,
+        name: 'Tico',
+        price: 10_000,
+        category: 'Yengil Mashinalar', liked: false,
+    },
+    {
+        id: 12,
+        img: img2,
+        name: 'Tico',
+        price: 10_000,
+        category: 'Yengil Mashinalar', liked: false,
+    },
+    {
+        id: 13,
+        img: img2,
+        name: 'Tico',
+        price: 10_000,
+        category: 'Yengil Mashinalar', liked: false,
+    },
+    {
+        id: 14,
+        img: img2,
+        name: 'Tico',
+        price: 10_000,
+        category: 'Yengil Mashinalar', liked: false,
+    },
+    {
+        id: 15,
+        img: img2,
+        name: 'Tico',
+        price: 10_000,
+        category: 'Yengil Mashinalar', liked: false,
+    },
+    {
+        id: 16,
+        img: img2,
+        name: 'Tico',
+        price: 10_000,
+        category: 'Yengil Mashinalar', liked: false,
+    },
+    {
+        id: 17,
+        img: img2,
+        name: 'Tico',
+        price: 10_000,
+        category: 'Yengil Mashinalar', liked: false,
+    },
+    {
+        id: 18,
+        img: img2,
+        name: 'Tico',
+        price: 10_000,
+        category: 'Yengil Mashinalar', liked: false,
+    },
+    {
+        id: 19,
+        img: img2,
+        name: 'Tico',
+        price: 10_000,
+        category: 'Yengil Mashinalar', liked: false,
+    },
+    {
+        id: 20,
+        img: img2,
+        name: 'Tico',
+        price: 10_000,
+        category: 'Yengil Mashinalar', liked: false,
+    },
+    {
+        id: 21,
+        img: img3,
+        name: 'Mototsikl',
+        price: 1_000,
+        category: 'Mototsikllar', liked: false,
+    },
+    {
+        id: 22,
+        img: img3,
+        name: 'Mototsikl',
+        price: 1_000,
+        category: 'Mototsikllar', liked: false,
+    },
+    {
+        id: 23,
+        img: img3,
+        name: 'Mototsikl',
+        price: 1_000,
+        category: 'Mototsikllar', liked: false,
+    },
+    {
+        id: 24,
+        img: img3,
+        name: 'Mototsikl',
+        price: 1_000,
+        category: 'Mototsikllar', liked: false,
+    },
+    {
+        id: 25,
+        img: img3,
+        name: 'Mototsikl',
+        price: 1_000,
+        category: 'Mototsikllar', liked: false,
+    },
+    {
+        id: 26,
+        img: img3,
+        name: 'Mototsikl',
+        price: 1_000,
+        category: 'Mototsikllar', liked: false,
+    },
+    {
+        id: 27,
+        img: img3,
+        name: 'Mototsikl',
+        price: 1_000,
+        category: 'Mototsikllar', liked: false,
+    },
+    {
+        id: 28,
+        img: img3,
+        name: 'Mototsikl',
+        price: 1_000,
+        category: 'Mototsikllar', liked: false,
+    },
+    {
+        id: 29,
+        img: img3,
+        name: 'Mototsikl',
+        price: 1_000,
+        category: 'Mototsikllar', liked: false,
+    },
+    {
+        id: 30,
+        img: img3,
+        name: 'Mototsikl',
+        price: 1_000,
+        category: 'Mototsikllar', liked: false,
+    },
+]
+
+export default Cars
+
+export const arr = [
+    { name: 'apple', price: '2000sum', id: 1 },
+    { name: 'orange', price: '2500sum', id: 2 },
+    { name: 'peach', price: '2700sum', id: 3 }
 ]

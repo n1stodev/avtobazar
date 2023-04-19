@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Main.css'
 import { Link } from 'react-router-dom'
-import { PRODUCTS } from '../../static'
-import { BsHeart } from 'react-icons/bs'
-// import img1 from '../../assets/images/page__link1.jpg'
-// import img2 from '../../assets/images/page__link2.jpg'
-// import img3 from '../../assets/images/page__link3.jpg'
+import Cars from '../../static'
+import { BsHeart, BsHeartFill, BsChevronRight } from 'react-icons/bs'
 
 function Main() {
+  const [car, setCar] = useState(Cars);
+
+  const handleCar = (postId) => {
+    const postIndex = car.findIndex(post => post.id === postId);
+    const updatedPosts = [...car];
+    updatedPosts[postIndex].liked = true;
+    setCar(updatedPosts);
+  };
   return (
     <div className='main'>
       <div className="container">
@@ -20,58 +25,28 @@ function Main() {
           </Link>
         </div>
         <div className="main__products">
-          <h2 className="main__productsTitle">Yuk mashinalar</h2>
           {
-            PRODUCTS[0]?.map((e, inx) => (
-              <div className="main__productsCard" key={inx}>
-                <img src={e.url} alt="" className='main__pCImg' />
+            Cars?.map((e) => (
+              <div className="main__productsCard" key={e.id}>
+                <Link to={`/products/${e.id}`}>
+                  <img src={e.img} alt="" className='main__pCImg' />
+                </Link>
                 <h2 className='main__pCTitle'>{e.name}</h2>
                 <div className='caca'>
                   <h1 className='main__pCPrice'>{e.price} $</h1>
                   <p className='main__pCCategory'>{e.category}</p>
                 </div>
                 <div className="main__pCBtns">
-                  <button className="main__pCLiked"><BsHeart /></button>
-                  <button className="main__pCBtn">Batafsil</button>
+                  <button className='main__pCLiked' onClick={() => handleCar(e.id)}>{e.liked ? <BsHeartFill /> : <BsHeart />}</button>
+                  <Link to={`/products/${e.id}`} className={"main__pCBtn"}><button>Batafsil</button></Link>
                 </div>
+                <Link to={`product-comments/${e.id}`} className="main__pc-comment">
+                  <span>Fikr bildirish</span>
+                  <BsChevronRight />
+                </Link>
               </div>
             ))
           }
-          <h2 className="main__productsTitle">Yengil mashinalar</h2>
-          {
-            PRODUCTS[1]?.map((e, inx) => (
-              <div className="main__productsCard" key={inx}>
-                <img src={e.url} alt="" className='main__pCImg' />
-                <h2 className='main__pCTitle'>{e.name}</h2>
-                <div className='caca'>
-                  <h1 className='main__pCPrice'>{e.price} $</h1>
-                  <p className='main__pCCategory'>{e.category}</p>
-                </div>
-                <div className="main__pCBtns">
-                  <button className="main__pCLiked"><BsHeart /></button>
-                  <button className="main__pCBtn">Batafsil</button>
-                </div>
-              </div>
-            ))
-          }
-          <h2 className="main__productsTitle">Mototsikllar</h2>
-          {
-            PRODUCTS[2]?.map((e, inx) => (
-              <div className="main__productsCard" key={inx}>
-                <img src={e.url} alt="" className='main__pCImg' />
-                <h2 className='main__pCTitle'>{e.name}</h2>
-                <div className='caca'>
-                  <h1 className='main__pCPrice'>{e.price} $</h1>
-                  <p className='main__pCCategory'>{e.category}</p>
-                </div>
-                <div className="main__pCBtns">
-                  <button className="main__pCLiked"><BsHeart /></button>
-                  <button className="main__pCBtn">Batafsil</button>
-                </div>
-              </div>
-            ))
-          }
-
         </div>
       </div>
     </div>
