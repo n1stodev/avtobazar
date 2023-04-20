@@ -2,12 +2,11 @@ import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import Cars, { arr } from '../../static'
 import './SinglePage.css'
-import img1 from '../../assets/images/page__link1.jpg'
 
 const SinglePage = () => {
     const params = useParams()
 
-    const car = Cars.find(car => car.id === Number(params.id))
+    const car = Cars.find(car => car.id === +(params.id))
     return (
         <div className='single-page container'>
             <div className="single-page__images">
