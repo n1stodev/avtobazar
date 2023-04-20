@@ -73,13 +73,13 @@ class UserController {
                 return res.status(404).json({
                     message: 'User not found'
                 });
+            } else {
+                user.username = username ? username : user.username;
+                user.password = password ? password : user.password;
+                user.email = email ? email : user.email;
+
+                await user.save();
             }
-
-            user.username = username;
-            user.password = password;
-            user.email = email;
-
-            await user.save();
 
             res.status(200).json(user);
         } catch (error) {
@@ -91,15 +91,14 @@ class UserController {
 
     static async deleteUser(req, res) {
         try {
-            const user = await usersSchema.findById(req.params.id);
-
+            const user = await usersSchema.findByIdAndDelete(req.params.id);
             if (!user) {
                 return res.status(404).json({
                     message: 'User not found'
                 });
             }
 
-            await user.remove();
+            await user.save();
 
             res.status(204).json({
                 message: 'User deleted'

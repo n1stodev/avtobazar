@@ -109,12 +109,12 @@ class CommentController {
 
             const comment = await Comment.findByIdAndUpdate(
                 id, {
-                    content
+                   text: content
                 }, {
                     new: true,
                     runValidators: true
                 }
-            ).populate('userId', 'username');
+            );
 
             if (!comment) {
                 return res.status(404).json({

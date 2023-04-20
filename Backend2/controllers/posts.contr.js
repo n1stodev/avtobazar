@@ -81,11 +81,26 @@ class PostController {
             if (!post) {
                 return res.status(404).send('Post not found');
             }
-            if (req.user._id.toString() !== post.author.toString()) {
-                return res.status(403).send('Forbidden');
-            }
-            post.title = req.body.title;
-            post.content = req.body.content;
+            let {
+                title,
+                distance,
+                color,
+                variant,
+                wheel,
+                price,
+                year,
+                description,
+                comments
+            } = req.body;
+            post.title = title ? title : post.title,
+                post.distance = distance ? distance : post.distance,
+                post.color = color ? color : post.color,
+                post.variant = variant ? variant : post.variant,
+                post.wheel = wheel ? wheel : post.wheel,
+                post.price = price ? price : post.price,
+                post.year = year ? year : post.year,
+                post.description = description ? description : post.description,
+                post.comments = comments ? comments : post.comments
             await post.save();
             res.json(post);
         } catch (err) {
@@ -96,14 +111,14 @@ class PostController {
 
     static async delete(req, res) {
         try {
-            const post = await Post.findById(req.params.id);
+            const post = await Post.findByIdAndDelete(req.params.id);
             if (!post) {
                 return res.status(404).send('Post not found');
             }
             if (req.user._id.toString() !== post.author.toString()) {
                 return res.status(403).send('Forbidden');
             }
-            await post.delete();
+            await post.save();
             res.send('Post deleted');
         } catch (err) {
             console.error(err);
