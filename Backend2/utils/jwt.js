@@ -8,9 +8,5 @@ export const JWT = {
     },
     VERIFY: (token) => {
         return jwt.verify(token, secretKey);
-<<<<<<< HEAD
     }
-=======
-    } 
->>>>>>> 3af16b75607c56bc3a952f70471f19f488d582ff
 }
