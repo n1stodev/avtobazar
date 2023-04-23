@@ -16,7 +16,7 @@ mongoose.connect("mongodb+srv://abduhamidbotirovweb:abduhamidjon707@cluster0.ab9
 //   .exec(callback);
 // users.find({},{name:1})
 // users.find({$or:[{age:30},{age:25}]},{name:1})
-// users.find({$or:[{$gte:{age:20}},{age:25}]})
+// users.find({$or:[{$gte:{age:20}},{age:25}]}) 
 // users.find({ father: { $exists: true } });
 // users.find({language:{$size:2}});
 // users.find({language.1:'Uz');

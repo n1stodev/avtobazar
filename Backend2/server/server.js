@@ -9,10 +9,12 @@ import commentRoutes from '../routes/comments.routes.js';
 
 const PORT = process.env.PORT || 3000;
 const app = express();
+
 app.use(bodyParser.json());
 app.use(express.json());
+
 // User routes
-app.use('/api',userRoutes);
+app.use('/api', userRoutes);
 
 // Post routes
 app.use('/api', postRoutes);
