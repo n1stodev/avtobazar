@@ -25,6 +25,7 @@ function Main() {
           </Link>
         </div>
         <div className="main__products">
+          // Bu yerni o'zgeritish kerak
           {
             Car?.map((e) => (
               <div className="main__productsCard" key={e.id}>
