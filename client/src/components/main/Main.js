@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import './Main.css'
 import { Link } from 'react-router-dom'
-import Cars from '../../static'
+import Car from '../../static'
 import { BsHeart, BsHeartFill, BsChevronRight } from 'react-icons/bs'
 
 function Main() {
-  const [car, setCar] = useState(Cars);
+  const [car, setCar] = useState(Car);
 
   const handleCar = (postId) => {
     const postIndex = car.findIndex(post => post.id === postId);
