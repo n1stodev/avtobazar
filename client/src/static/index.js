@@ -224,8 +224,95 @@ const Cars = [
 
 export default Cars
 
-export const arr = [
-    { name: 'apple', price: '2000sum', id: 1 },
-    { name: 'orange', price: '2500sum', id: 2 },
-    { name: 'peach', price: '2700sum', id: 3 }
+export const DATA = [
+    {
+        name: 'Nurillo Tojiakhmedov',
+        phone: 993253708,
+        username: 'nurillo_tojiakhmedov',
+        chats: [
+            {
+                chatId: `nurillo-tojiakhmedov-1`,
+                int: 'lionel_messi',
+                int_mes: [
+                    {
+                        int_mesId: '5584584312',
+                        int_mesText: 'qanchadan ekan moshina',
+                    },
+                    {
+                        int_mesId: '5584584589',
+                        int_mesText: 'kraska yemaganmi?',
+                    }
+                ],
+                me_mes: [
+                    {
+                        me_mesId: '4845465182',
+                        me_mesText: '11000$ deyapmiz'
+                    },
+                    {
+                        me_mesId: '4845528621',
+                        me_mesText: 'eshigida sal bor?'
+                    }
+                ]
+            },
+            {
+                chatId: `nurillo-tojiakhmedov-2`,
+                int: 'steve_jobs',
+                int_mes: [
+                    {
+                        int_mesId: '5584584312',
+                        int_mesText: 'qanchadan ekan moshina',
+                    },
+                    {
+                        int_mesId: '5584584589',
+                        int_mesText: 'kraska yemaganmi?',
+                    }
+                ],
+                me_mes: [
+                    {
+                        me_mesId: '4845465182',
+                        me_mesText: '11000$ deyapmiz'
+                    },
+                    {
+                        me_mesId: '4845528621',
+                        me_mesText: 'eshigida sal bor?'
+                    }
+                ]
+            }
+
+        ],
+        posts: [
+            {
+                id: '226286253',
+                images: [
+                    'birinchisi',
+                    'ikkinchisi',
+                    'uchinchisi',
+                ],
+                comments: [
+                    {
+                        username: 'lionel_messi',
+                        text: 'insof bormi muncha qimmat?',
+                        id: '284688496'
+                    },
+                    {
+                        username: 'bill_gates',
+                        text: 'oka tel nomeriz bormi?',
+                        id: '584489465'
+                    }
+                ],
+                details: {
+                    rang: 'Red',
+                    variant: false,
+                    yili: 2020,
+                    yurgani: 12250,
+                    balon: 'temir',
+                    narx: 12000,
+                    nomi: 'Jentra',
+                    title: 'Jentra yangi zavodskoy 3-positsiya',
+                    positsiya: 3,
+                    tavsif: 'loremipsum dolor lorem ipsum dolor lorem ipsum dolor ipsum dolor lorem ipsum dolor ipsum dolor lorem ipsum dolor'
+                },
+            }
+        ]
+    }
 ]
