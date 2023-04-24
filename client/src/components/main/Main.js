@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import './Main.css'
 import { Link } from 'react-router-dom'
-import Car, { POST_API } from '../../static'
+import { POST_API } from '../../static'
 import { BsHeart, BsHeartFill, BsChevronRight } from 'react-icons/bs'
 
 function Main() {
-  const [data, setData] = useState([])
+  const [Car, setCar] = useState([])
 
   useEffect(() => {
     fetch(POST_API)
       .then((response) => response.json())
-      .then((car) => setData(car))
+      .then((car) => console.log(car))
       .catch((err) => console.log(err));
   }, []);
   return (
@@ -26,10 +26,7 @@ function Main() {
         </div>
         <div className="main__products">
           {
-            data?.map(e => console.log(e))
-          }
-          {
-            data?.map((e) => (
+            Car?.map((e) => (
               <div className="main__productsCard" key={e.id}>
                 <Link to={`/products/${e.id}`}>
                   <img src={e.img} alt="" className='main__pCImg' />
