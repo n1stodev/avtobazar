@@ -8,6 +8,10 @@ export const CAROUSEL = [
     `https://uzautomotors.com/images/uploads/2735d8cc39989fcdac2197e908485732.png`,
 ]
 
+export const POST_API = 'https://avtobazar-backend.onrender.com/api/posts'
+export const COMMENT_API = 'https://avtobazar-backend.onrender.com/api/comments'
+export const USER_API = 'https://avtobazar-backend.onrender.com/api/users'
+
 const Cars = [
     {
         id: 1,
