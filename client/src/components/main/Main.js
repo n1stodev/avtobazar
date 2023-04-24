@@ -10,7 +10,7 @@ function Main() {
   useEffect(() => {
     fetch(POST_API)
       .then((response) => response.json())
-      .then((car) => console.log(car))
+      .then((car) => setCar(car))
       .catch((err) => console.log(err));
   }, []);
   return (
@@ -25,7 +25,6 @@ function Main() {
           </Link>
         </div>
         <div className="main__products">
-          // Bu yerni o'zgeritish kerak
           {
             Car?.map((e) => (
               <div className="main__productsCard" key={e.id}>
