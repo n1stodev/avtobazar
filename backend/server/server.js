@@ -2,6 +2,7 @@ import express from "express";
 import "../utils/mongo.js";
 import dotenv from "dotenv";
 dotenv.config();
+import cors from "cors";
 import bodyParser from 'body-parser';
 import userRoutes from '../routes/users.routes.js';
 import postRoutes from '../routes/posts.routes.js';
@@ -12,7 +13,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(express.json());
-
+app.use(cors('*'))
 // User routes
 app.use('/api', userRoutes);
 
