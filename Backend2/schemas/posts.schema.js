@@ -20,11 +20,11 @@ const postSchema = new Schema({
         required: true
     },
     variant: {
-        type: String,
+        type: Boolean,
         required: true
     },
     wheel: {
-        type: Boolean,
+        type: String,
         required: true
     },
     year: {
