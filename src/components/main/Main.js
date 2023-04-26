@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './Main.css'
 import { Link } from 'react-router-dom'
 import { POST_API } from '../../static'
-import { BsHeart, BsHeartFill, BsChevronRight } from 'react-icons/bs'
+import { BsHeart } from 'react-icons/bs'
 
 function Main() {
   const [Car, setCar] = useState([])
