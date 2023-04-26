@@ -1,12 +1,12 @@
 import React from 'react'
-import { useParams, Link } from 'react-router-dom'
-import Cars, { arr } from '../../static'
+import { useParams } from 'react-router-dom'
+import POST_API from '../../static'
 import './SinglePage.css'
 
 const SinglePage = () => {
     const params = useParams()
 
-    const car = Cars.find(car => car.id === +(params.id))
+    const car = POST_API.find(car => car.id === +(params.id))
     return (
         <div className='single-page container'>
             <div className="single-page__images">
@@ -15,7 +15,7 @@ const SinglePage = () => {
             <div className="single-page__contents">
                 <h1 className="single-page__content-title">{'Lorem ipsum dolor Lorem ipsum dolor'}</h1>
                 <p className="single-page__content-sha">Sotuvchi: <span>{'Tojiakhmedov Nurillo'}</span></p>
-                <p className="single-page__content-sha">Mashina: <span>{car.name}</span></p>
+                <p className="single-page__content-sha">Mashina: <span>{car.title}</span></p>
                 <hr />
                 <div className="single-page__content-details">
                     <h4 className="single-page__content-detailsTitle">Mashina ma'lumotlari</h4>
