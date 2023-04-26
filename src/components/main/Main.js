@@ -13,6 +13,8 @@ function Main() {
       .then((car) => setCar(car))
       .catch((err) => console.log(err));
   }, []);
+
+  console.log(Car)
   return (
     <div className='main'>
       <div className="container">
@@ -27,9 +29,9 @@ function Main() {
         <div className="main__products">
           {
             Car?.map((e) => (
-              <div className="main__productsCard" key={e.id}>
-                <Link to={`/products/${e.id}`}>
-                  <img src={e.img} alt="" className='main__pCImg' />
+              <div className="main__productsCard" key={e._id}>
+                <Link to={`/products/${e._id}`}>
+                  <img src={`https://avtobazar-backend.onrender.com/imgs/${e.image}`} alt="" className='main__pCImg' />
                 </Link>
                 <h2 className='main__pCTitle'>{e.title}</h2>
                 <div className='caca'>
@@ -38,9 +40,9 @@ function Main() {
                 </div>
                 <div className="main__pCBtns">
                   <button className='main__pCLiked'><BsHeart /></button>
-                  <Link to={`/products/${e.id}`} className={"main__pCBtn"}><button>Batafsil</button></Link>
+                  <Link to={`/products/${e._id}`} className={"main__pCBtn"}><button>Batafsil</button></Link>
                 </div>
-                <Link to={`product-comments/${e.id}`} className="main__pc-comment">
+                <Link to={`product-comments/${e._id}`} className="main__pc-comment">
                   <span>Fikr bildirish</span>
                   <BsChevronRight />
                 </Link>
