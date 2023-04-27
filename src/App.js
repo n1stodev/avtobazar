@@ -9,6 +9,7 @@ import Liked from './router/liked/Liked';
 import SinglePage from './router/single-page/SinglePage';
 import Comments from './components/comments/Comments';
 import UserProfile from './router/user-profile/UserProfile';
+import AddPost from './components/AddPost/AddPost';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/profile' element={<UserProfile />} />
         <Route path='/products/:id' element={<SinglePage />} />
+        <Route path='/add' element={<AddPost />} />
         <Route path='/login' element={<SignIn />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/liked' element={<Liked />} />

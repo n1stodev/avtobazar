@@ -10,7 +10,7 @@ const SinglePage = () => {
     return (
         <div className='single-page container'>
             <div className="single-page__images">
-                <img src={car.img} alt={`car`} />
+                <img src={car.img} alt={'saSA'} />
             </div>
             <div className="single-page__contents">
                 <h1 className="single-page__content-title">{'Lorem ipsum dolor Lorem ipsum dolor'}</h1>
