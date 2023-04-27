@@ -5,9 +5,16 @@ import { FiMessageCircle, FiHeart, FiUser } from 'react-icons/fi'
 import { FaTruckMoving, FaMotorcycle, FaCarSide, FaBars } from 'react-icons/fa'
 import { BsXLg } from 'react-icons/bs'
 
-function Navbar() {
+function Navbar({ setIsLoggedIn = Function.prototype, isLoggedIn }) {
     const [open, setOpen] = useState(false)
     const [nav, setNav] = useState(false)
+    const handleLogout = () => {
+        // Remove token from localStorage
+        localStorage.removeItem("token");
+        // Set isLoggedIn to false
+        setIsLoggedIn(false);
+        console.log('you are logged out')
+    };
 
     let navRef = useRef()
 
@@ -43,6 +50,22 @@ function Navbar() {
                             <FiUser />
                             <span>Kirish</span>
                         </NavLink>
+                        {isLoggedIn ? (
+
+                            <li>
+                                <a href="/signup">Sign Up</a>
+                            </li>
+
+                        ) : (
+                            <>
+                                <li>
+                                    <a href='/add'>Add Posts</a>
+                                </li>
+                                <li>
+                                    <button onClick={() => handleLogout()}>Logout</button>
+                                </li>
+                            </>
+                        )}
                     </ul>
                 </div>
                 <div className={`nav__dropdown ${open ? 'active' : 'unactive'}`} ref={navRef}>
