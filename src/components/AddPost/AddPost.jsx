@@ -4,7 +4,6 @@ const AddPost = () => {
   const [postData, setPostData] = useState({
     title: "",
     color: "",
-    author: "",
     distance: 0,
     variant: "",
     wheel: "bor",
@@ -28,6 +27,7 @@ const AddPost = () => {
     const formData = new FormData();
     formData.append("image", event.target.files[0]);
     setPostData({ ...postData, image: formData });
+    console.log(event.target.files[0])
   };
 
   const handleSubmit = async (event) => {
@@ -36,7 +36,6 @@ const AddPost = () => {
       const formData = new FormData();
       formData.append("title", postData.title);
       formData.append("color", postData.color);
-      formData.append("author", postData.author);
       formData.append("distance", postData.distance);
       formData.append("variant", postData.variant);
       formData.append("wheel", postData.wheel);
@@ -64,7 +63,6 @@ const AddPost = () => {
       setPostData({
         title: "",
         color: "",
-        author: "",
         distance: 0,
         variant: "",
         wheel: "bor",
@@ -99,15 +97,6 @@ const AddPost = () => {
           id="color"
           name="color"
           value={postData.color}
-          onChange={handleInputChange}
-        />
-        <br />
-        <label htmlFor="content">author:</label>
-        <input
-          type="text"
-          id="author"
-          name="author"
-          value={postData.author}
           onChange={handleInputChange}
         />
         <br />
