@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 
 const AddPost = () => {
   const [postData, setPostData] = useState({
@@ -6,19 +7,29 @@ const AddPost = () => {
     color: "",
     distance: 0,
     variant: "",
-    wheel: "bor",
+    wheel: false,
     image: "", // use null instead of an empty string for the image property
     year: 0,
     price: 0,
     description: "",
     phoneNumber: 0,
     email: "",
+    imgtitle: '',
   });
+
+  const [IsChecked, setIsChecked] = useState(false)
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setPostData({ ...postData, [name]: value });
   };
+
+  const handleCheckboxChange = (event) => {
+    setIsChecked(event.target.checked);
+    console.log(event.target.checked);
+  };
+
+  
 
   console.log(postData.image);
 
@@ -26,7 +37,7 @@ const AddPost = () => {
     event.preventDefault();
     const formData = new FormData();
     formData.append("image", event.target.files[0]);
-    setPostData({ ...postData, image: formData });
+    setPostData({ ...postData, image: event.target.files[0]});
     console.log(event.target.files[0])
   };
 
@@ -38,13 +49,14 @@ const AddPost = () => {
       formData.append("color", postData.color);
       formData.append("distance", postData.distance);
       formData.append("variant", postData.variant);
-      formData.append("wheel", postData.wheel);
-      formData.append("image", postData.image); // append the image to the form data
+      formData.append("wheel", IsChecked);
+      formData.append("file", postData.image); // append the image to the form data
       formData.append("year", postData.year);
       formData.append("price", postData.price);
       formData.append("description", postData.description);
       formData.append("phoneNumber", postData.phoneNumber);
       formData.append("email", postData.email);
+      formData.append("imgtitle", postData.imgtitle);
 
       const response = await fetch(
         "https://avtobazar-backend.onrender.com/api/posts",
@@ -65,7 +77,7 @@ const AddPost = () => {
         color: "",
         distance: 0,
         variant: "",
-        wheel: "bor",
+        wheel: false,
         image: "", // reset the image property to null
         year: 0,
         price: 0,
@@ -73,6 +85,7 @@ const AddPost = () => {
         phoneNumber: 0,
         email: "",
       });
+      setIsChecked(false);
     } catch (error) {
       console.error("Failed to add post:", error);
     }
@@ -120,12 +133,12 @@ const AddPost = () => {
         <br />
         <label htmlFor="content">wheel:</label>
         <input
-          type="text"
-          id="wheel"
-          name="wheel"
-          value={postData.wheel}
-          onChange={handleInputChange}
-        />
+            type="checkbox"
+            id="wheel"
+            name="wheel"
+            checked={IsChecked}
+            onChange={handleCheckboxChange}
+          />
         <br />
         <label htmlFor="content">year:</label>
         <input
