@@ -30,7 +30,7 @@ function Main() {
           {
             Car?.map((e) => (
               <div className="main__productsCard" key={e._id}>
-                <Link to={`/products/${e._id}`}>
+                <Link to={`/products/${e._id}`} state={e}>
                   <img src={`https://avtobazar-backend.onrender.com/imgs/${e.image}`} alt="" className='main__pCImg' />
                 </Link>
                 <h2 className='main__pCTitle'>{e.title}</h2>

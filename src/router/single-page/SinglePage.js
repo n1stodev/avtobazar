@@ -1,30 +1,28 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import POST_API from '../../static'
 import './SinglePage.css'
+import { useLocation } from 'react-router-dom'
 
 const SinglePage = () => {
-    const params = useParams()
-
-    const car = POST_API.find(car => car.id === +(params.id))
+    const car = useLocation().state
     return (
         <div className='single-page container'>
             <div className="single-page__images">
-                <img src={car.img} alt={'saSA'} />
+                <img src={`https://avtobazar-backend.onrender.com/imgs/${car.image}`} alt={car.title} />
             </div>
             <div className="single-page__contents">
-                <h1 className="single-page__content-title">{'Lorem ipsum dolor Lorem ipsum dolor'}</h1>
+                <h1 className="single-page__content-title">{car.title}</h1>
                 <p className="single-page__content-sha">Sotuvchi: <span>{'Tojiakhmedov Nurillo'}</span></p>
                 <p className="single-page__content-sha">Mashina: <span>{car.title}</span></p>
                 <hr />
                 <div className="single-page__content-details">
                     <h4 className="single-page__content-detailsTitle">Mashina ma'lumotlari</h4>
                     <ul className="single-page__content-detailsCol">
-                        <li className="single-page__content-detailsItem"> Yurgan: <span>{200000} km</span></li>
-                        <li className="single-page__content-detailsItem"> Rangi: <span>{'Qora'}</span></li>
-                        <li className="single-page__content-detailsItem"> Variantga: <span>{"Yo'q"}</span></li>
+                        <li className="single-page__content-detailsItem"> Yurgan: <span>{car.distance} km</span></li>
+                        <li className="single-page__content-detailsItem"> Rangi: <span>{car.color}</span></li>
+                        <li className="single-page__content-detailsItem"> Variantga: <span>{car.variant}</span></li>
                         <li className="single-page__content-detailsItem"> Gaz balon: <span>{"Temir"}</span></li>
-                        <li className="single-page__content-detailsItem"> Yili: <span>{2020}-yil</span></li>
+                        <li className="single-page__content-detailsItem"> Yili: <span>{car.year}-yil</span></li>
                         <li className="single-page__content-detailsItem"> Positsiya: <span>{4}-positsiya</span></li>
                     </ul>
                 </div>
@@ -37,7 +35,7 @@ const SinglePage = () => {
                 <p className="single-page__content-desc">
                     <span>Tavsif:</span> <br />
                     {
-                        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis officiis nemo aliquid, vero dolorem eveniet Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis officiis nemo Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis officiis nemo aliquid, vero dolorem eveniet itaque deleniti ea! Eveniet, minus. aliquid, vero dolorem eveniet itaque deleniti ea! Eveniet, minus. itaque deleniti ea! Eveniet, minus.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis officiis nemo aliquid, vero dolorem eveniet itaque deleniti ea! Eveniet, minus.'
+                        car.description
                     }
                 </p>
             </div>
