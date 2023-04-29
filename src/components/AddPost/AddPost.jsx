@@ -51,7 +51,6 @@ const AddPost = () => {
       formData.append("distance", postData.distance);
       formData.append("variant", postData.variant);
       formData.append("wheel", IsChecked);
-      formData.append("wheel", postData.wheel);
       formData.append("file", postData.image); // append the image to the form data
       formData.append("year", postData.year);
       formData.append("price", postData.price);
