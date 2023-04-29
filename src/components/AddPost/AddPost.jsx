@@ -38,6 +38,7 @@ const AddPost = () => {
     const formData = new FormData();
     formData.append("image", event.target.files[0]);
     setPostData({ ...postData, image: event.target.files[0]});
+    setPostData({ ...postData, image: event.target.files[0] });
     console.log(event.target.files[0])
   };
 
@@ -50,6 +51,7 @@ const AddPost = () => {
       formData.append("distance", postData.distance);
       formData.append("variant", postData.variant);
       formData.append("wheel", IsChecked);
+      formData.append("wheel", postData.wheel);
       formData.append("file", postData.image); // append the image to the form data
       formData.append("year", postData.year);
       formData.append("price", postData.price);
@@ -104,7 +106,7 @@ const AddPost = () => {
           onChange={handleInputChange}
         />
         <br />
-        <label htmlFor="content">color:</label>
+        <label htmlFor="content">Color:</label>
         <input
           type="text"
           id="color"
