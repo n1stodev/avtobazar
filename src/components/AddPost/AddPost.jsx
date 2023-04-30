@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const AddPost = () => {
+const AddPost = ({toast}) => {
   const [postData, setPostData] = useState({
     title: "",
     color: "",
@@ -71,7 +71,8 @@ const AddPost = () => {
       );
 
       const data = await response.json();
-      console.log("Post added successfully:", data);
+      toast.success("Car added successfully");
+      console.log(data)
 
       setPostData({
         title: "",
@@ -88,8 +89,9 @@ const AddPost = () => {
       });
       setIsChecked(false);
     } catch (error) {
-      console.error("Failed to add post:", error);
+      toast.error("Error", error);
     }
+   
   };
 
   return (
